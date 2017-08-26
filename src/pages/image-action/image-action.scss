@@ -1,0 +1,18 @@
+page-image-action {
+    
+    .scroll-content{
+        padding-top: 0px !important;
+    }
+    ion-header, .toolbar-background {
+        background-color: initial !important;
+        // background-color: rgba(0,0,0,0) !important;
+    
+        &:after {
+          height: 0  !important;
+        }
+      }
+      .mainFAB{
+        background-color: white;
+        color: black;
+      }
+}

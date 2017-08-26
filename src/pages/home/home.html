@@ -1,14 +1,18 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <button ion-button menuToggle class="mtc">
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    <ion-title class="tc theme-text">Wallpapers</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col class="minW50" *ngFor="let image of images">
+        <img [src]="image" (click)="openImage(image)" class="gridImage">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
