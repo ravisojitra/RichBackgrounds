@@ -1,0 +1,22 @@
+page-shareme {
+    .bord-col{
+		padding: 24px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .bord-col.activated{
+        box-shadow: none;
+    }
+    .facebook-btn{
+        background: #4867AA;
+        width: 80%;
+        margin-left: 10%;
+        color: #c9c7d3;
+    }
+    .scroll-content{
+        background: #19152c;
+    }
+    .customIcon{
+        color: #c9c7d3;
+    }
+}

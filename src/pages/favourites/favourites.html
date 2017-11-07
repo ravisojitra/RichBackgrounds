@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle class="mtc">
+      <ion-icon name="menu" ></ion-icon>
+    </button>
+    <ion-title class="tc theme-text">My Favourites</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row wrap>
+      <ion-col class="minW50" *ngFor="let image of images">
+        <img [src]="image" (click)="openImage(image)" class="gridImage">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

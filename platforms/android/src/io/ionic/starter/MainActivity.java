@@ -21,6 +21,8 @@ package io.ionic.starter;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
+import android.os.Build;
+import android.view.View;
 
 public class MainActivity extends CordovaActivity
 {
@@ -28,7 +30,10 @@ public class MainActivity extends CordovaActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            getWindow().getDecorView().setSystemUiVisibility(
+            View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
+        }
         // enable Cordova apps to be started in the background
         Bundle extras = getIntent().getExtras();
         if (extras != null && extras.getBoolean("cdvStartInBackground", false)) {

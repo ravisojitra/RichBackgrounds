@@ -9,5 +9,8 @@ import { ImageActionPage } from './image-action';
   imports: [
     IonicPageModule.forChild(ImageActionPage),
   ],
+  exports:[
+    ImageActionPage
+  ]
 })
 export class ImageActionPageModule {}
